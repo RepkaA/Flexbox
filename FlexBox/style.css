@@ -1,0 +1,36 @@
+.flexContainer {
+    display:flex;
+    flex-flow:row wrap; 
+}
+section {
+    flex:3 1 0px;
+    padding: 10px;
+    border:1px solid white;
+    border-radius:2px;
+    text-align:justify;
+}
+aside {
+    flex:1 1 0px;
+    padding:10px;
+    border:1px solid white;
+    border-radius:2px;
+}
+section { order:2;}
+.bal { order:1;}
+.jobb {order:3;}
+*{box-sizing: border-box;}
+body{background:rgb(27, 27, 10) url('img/hatter.jpg');color:beige }
+nav, footer {background: rgb(64, 141, 151); padding:2px 5px;}
+nav ul{padding:0;}
+nav ul li {list-style-type: none; padding:0 15px;}
+nav a {text-decoration: none;color:#ffcc66}
+nav a:hover{color:coral;}
+footer {text-align:center;}
+@media screen and (max-width:500px) {
+    .flexContainer {   flex-flow:column wrap; justify-content: space-between;    }
+    section { order:1;   }
+    .bal { order:2;  }
+    .jobb {  order:3;   }
+}
+.flexEnd {justify-content: flex-end;}
+.flexStart {justify-content: flex-start;}
